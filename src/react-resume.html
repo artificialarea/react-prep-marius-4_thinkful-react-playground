@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html land="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="keywords" content="React App practice">
+        <meta name="description" content="practicing React">
+        <title>Curriculum Vitae</title>
+        <link rel="shortcut icon" href="">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div id="application-root"></div>
+        <script
+                src="https://unpkg.com/react@16/umd/react.development.js">
+        </script>
+        <script
+                src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+        </script>
+        <script
+                src="https://unpkg.com/babel-standalone@6/babel.min.js">
+        </script>
+        <script type="text/babel">
+const appRoot = document.querySelector('#application-root');
+
+function App(props) {
+    // console.log(props)
+    return (
+        <div>
+            <header>
+                <h1>{props.children}</h1>
+            </header>
+            <img src="https://m.media-amazon.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_.jpg" width="250" height="auto"/>
+            <main>
+                <h2>Personal Info</h2>
+
+                <address>
+                    <ul>
+                        <li>Name: Sally</li>
+                        <li>Email: <a href="mailto:sally@broad.com?subject=Blog Conntact">sally@broad</a></li>
+                        <li>Phone Number: 890-753-287</li>
+                        <li>Address: NewYork, Brooklyn</li>
+            </ul>
+            </address>
+
+                <hr/>
+
+                <section>
+                    <h2>Education</h2>
+                    <p>
+                        <ul>
+                            <li>Princton HightSchool: 1997-2001</li>
+                            <li>Princton University: 2002-2005, BA degree in Linguistics</li>
+            </ul>
+            </p>
+            </section>
+
+                <section>
+                    <h2>Employment History</h2>
+                    <h3>Microsoft: Operations Manager (2005-2010)</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <h3>Netflix: Head of Operations (2010-2019)</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </section>
+            </main>
+            <hr/>
+            <footer>References are available upon a request</footer>
+            </div>
+    );
+}
+ReactDOM.render(
+    <App className='my-class' name="Sally">
+        <h1>Sally's Curriculum Vitae</h1>
+            </App>,
+    document.querySelector('#application-root')
+);
+        </script>
+    </body>
+</html>

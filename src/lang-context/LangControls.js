@@ -6,12 +6,12 @@ console.log(LanguageContext)
 export default function LangControls(props) {
     return (
         <LanguageContext.Consumer>
-            {(value) => {
-                console.log(value)
+            {(contextValue) => {
+                console.log(contextValue)
                 return (
                     <>
                         <button
-                            disabled={value.lang === 'en-GB'}
+                            disabled={contextValue.lang === 'en-GB'}
                             onClick={() => props.onSetLang('en-GB')}
                         >
                             British{' '}
@@ -19,7 +19,7 @@ export default function LangControls(props) {
                         </button>
                         {' '}
                         <button
-                            disabled={value.lang === 'en-US'}
+                            disabled={contextValue.lang === 'en-US'}
                             onClick={() => props.onSetLang('en-US')}
                         >
                             American{' '}
@@ -27,13 +27,13 @@ export default function LangControls(props) {
                         </button>
                         {' '}
                         <button
-                            disabled={value.lang === 'ko'}
+                            disabled={contextValue.lang === 'ko'}
                             onClick={() => props.onSetLang('ko')}
                         >
                             Korean{' '}
                             <span role='img' aria-label='ko'>🇰🇷</span>
                         </button>
-                        
+
                     </>
                 )
             }}

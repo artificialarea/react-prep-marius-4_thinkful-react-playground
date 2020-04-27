@@ -8,18 +8,16 @@ class GreatGrandChild extends Component {
     render() {
         const copy = languageSpecificCopy[this.context.lang] || {}
         return (
-            <section>
-                <h2>{copy.title}</h2>
-                <p>{copy.body}</p>
-                <button
-                onClick={() => this.context.setLang('klingon')}
-                >
-                    Klingon!{' '}
-                    <span role='img' aria-label='klingon'>🖖</span>
-                </button>
-        </section>
+                <section>
+                    <h2>{copy.title}</h2>
+                    <p>{copy.body}</p>
+                    <button onClick={() => this.context.setLang('klingon')}>
+                        Klingon!{' '}
+                        <span role='img' aria-label='klingon'>🖖</span>
+                    </button>
+                </section>
                 )
             }
         }
-        
+
 export default GreatGrandChild

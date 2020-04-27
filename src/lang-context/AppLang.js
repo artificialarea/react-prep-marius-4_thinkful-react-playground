@@ -4,7 +4,7 @@ import LangControls from './LangControls'
 import LanguageContext from './LanguageContext'
 
 export default class AppLang extends Component {
-    
+
     state = {
         lang: window.navigator.language
     };
@@ -19,13 +19,13 @@ export default class AppLang extends Component {
             setLang: this.handleSetLang,
         }
         return (
-            <LanguageContext.Provider value={contextValue}>
-                < div className='AppLang' >
+            <LanguageContext.Provider contextValue={contextValue}>
+                <div className='AppLang'>
                     <LangControls
                         onSetLang={this.handleSetLang}
                     />
                     <Child />
-                </div >
+                </div>
             </LanguageContext.Provider>
         );
     }

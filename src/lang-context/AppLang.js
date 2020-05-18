@@ -18,6 +18,7 @@ export default class AppLang extends Component {
             lang: this.state.lang,
             setLang: this.handleSetLang,
         }
+        console.log(contextValue)
         return (
             <LanguageContext.Provider contextValue={contextValue}>
                 <div className='AppLang'>

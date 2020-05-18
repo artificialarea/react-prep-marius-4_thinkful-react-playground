@@ -6,6 +6,7 @@ class GreatGrandChild extends Component {
 
     static contextType = LanguageContext;
     render() {
+        console.log(this.context)
         const copy = languageSpecificCopy[this.context.lang] || {}
         return (
                 <section>
